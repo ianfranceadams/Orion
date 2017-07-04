@@ -14,7 +14,7 @@ h2 {
    margin-bottom: 5px;
  }
  p {
-  font-size:20px;
+  font-size:14px;
   line-height: 19px;
   font-weight: normal;
 }
@@ -43,73 +43,6 @@ h2 {
   min-height: 1px;
   margin:0 2% 20px;
 }
-
-@media (min-width: 320px) {
-  .container {
-    width: 310px;
-  }
-  .one-half {
-    width: 100%;
-    float:left;
-    position:relative;
-    min-height: 1px;
-    margin:0 2% -12%;
-  }
-  .dash {
-    width: 100%;
-  }
-  header .hero h1 {
-    font-size:48px;
-    font-weight: normal;
-    margin:100px 0 0;
-  }
-  .benefits {
-    text-align: center;
-    display:block;
-    position:relative;
-    height: 940px;
-  }
-}
-
-@media (min-width: 360px) {
-  .container {
-    width: 340px;
-  }
-}
-@media (min-width: 375px) {
-  .container {
-    width: 350px;
-  }
-}
-@media (min-width: 414px) {
-  .container {
-    width: 390px;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-@media (min-width: 992px) {
-   .container {
-     width: 970px;
-   }
-   .one-half {
-     width:96%;
-   }
-   .one-third {
-     width:29.33333%;
-   }
-   .one-fourth {
-     width:21%;
-   }
- }
- @media (min-width: 1200px) {
-   .container {
-     width: 96%;
-   }
- }
 
 /* HEADER */
 header {
@@ -397,24 +330,6 @@ BOTTOM HERE FOR THE .STAGGER CLASS DID WORK.  WEIRD.
    display: block;
  }
 
- @media (min-width: 992px){
-  footer{
-    background-color: #001B4C;
-    background-image: linear-gradient(to left,
-       #353576 0%, #353576 33.33337%, #001B4C 33.33337%, #001B4C 100%);
-    height: 100px;
-  }
-  footer p, footer nav ul{
-    padding: 2em 0;
-    text-align: left;
-  }
-  footer .right-footer-block {
-    background-color: #001B4C;
-  }
-  footer .logo{
-    padding: 2em 0 2em 1.5em;
-  }
-}
 
 /* DASHBOARD */
 
@@ -425,9 +340,55 @@ BOTTOM HERE FOR THE .STAGGER CLASS DID WORK.  WEIRD.
 .active {
    background: #001B4C;
 }
+.left-nav {
+   height: 100%;
+   width: 280px;
+   color:#FFFFFF;
+   background: #001B4C;
+   background-image: linear-gradient(206deg, #353576 0%, #001B4C 94%);
+   float:left;
+   position: absolute;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  transform: translate(-280px,0);
+    -webkit-transform: translate(-280px,0); /** Chrome & Safari **/
+    -o-transform: translate(-280px,0); /** Opera **/
+    -moz-transform: translate(-280px,0); /** Firefox **/
+}
+.left-nav.open {
+  display:block;
+  width:280px;
+  background: #34495E;
+  background-image: linear-gradient(206deg, #353576 0%, #001b4c 94%);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  transform: translate(0,0);
+    -webkit-transform: translate(0,0); /** Chrome & Safari **/
+    -o-transform: translate(0,0); /** Opera **/
+    -moz-transform: translate(0,0); /** Firefox **/
+    z-index: 100;
+}
+.hamburger {
+  position:absolute;
+  z-index: 1000;
+  background:#001b4c;
+  color:#FFF;
+  text-decoration: none;
+  font-size: 22px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  left: 5px;
+  top: 15px;
+}
+
+
   .left-nav {
     height: 100vh;
-    width:14.66666667%;
+    width:14.6666667%;
     color:#FFFFFF;
     background: #001B4C;
     background-image: linear-gradient(206deg, #353576 0%, #001B4C 94%);
@@ -474,7 +435,7 @@ BOTTOM HERE FOR THE .STAGGER CLASS DID WORK.  WEIRD.
 
 .left-nav .settings {
   position:absolute;
-  background:#22303E;
+  background:#353576;
   width:100%;
   bottom:0;
   left:0;
@@ -492,7 +453,7 @@ BOTTOM HERE FOR THE .STAGGER CLASS DID WORK.  WEIRD.
   display: inline-block;
   vertical-align: top;
   padding-top: 8px;
-  font-weight: 400;
+  font-weight: 200;
   margin:0 0 0 10px;
 }
 .left-nav .settings a {
@@ -512,7 +473,8 @@ BOTTOM HERE FOR THE .STAGGER CLASS DID WORK.  WEIRD.
    position: relative;
  }
  .content .header {
-   margin:0 1% 20px;
+   margin:-1px 1% 20px;
+   height: 54px;
  }
  .content .header h1 {
    font-family: "Avenir", Helvetica, Arial, sans-serif;
@@ -543,51 +505,75 @@ BOTTOM HERE FOR THE .STAGGER CLASS DID WORK.  WEIRD.
    padding:20px;
  }
 
- /* Larger Mobile Devices */
-  @media (min-width:460px) {
-    .content {
-      padding:1.5em 1%;
-      float:right;
-      width:90%;
-      position: relative;
+
+
+
+/* ORIGINAL MEDIA QUERIES */
+
+ @media (min-width: 320px) {
+   .container {
+     width: 310px;
+   }
+   .one-half {
+     width: 100%;
+     float:left;
+     position:relative;
+     min-height: 1px;
+     margin:0 2% -12%;
+   }
+   .dash {
+     width: 100%;
+   }
+   header .hero h1 {
+     font-size:48px;
+     font-weight: normal;
+     margin:100px 0 0;
+   }
+   .benefits {
+     text-align: center;
+     display:block;
+     position:relative;
+     height: 940px;
+   }
+ }
+
+ @media (min-width: 360px) {
+   .container {
+     width: 340px;
+   }
+ }
+ @media (min-width: 375px) {
+   .container {
+     width: 350px;
+   }
+ }
+ /*@media (min-width: 414px) {
+   .container {
+     width: 390px;
+   }
+ }
+ @media (min-width: 768px) {
+   .container {
+     width: 750px;
+   }
+ }*/
+ @media (min-width: 992px) {
+    .container {
+      width: 970px;
     }
-    .content-item {
-      width:46%;
-      margin:0 2% 25px;
-      float:left;
-      display:block;
+    .one-half {
+      width:96%;
+    }
+    .one-third {
+      width:29.33333%;
+    }
+    .one-fourth {
+      width:21%;
     }
   }
- /* Tablets */
-  @media (min-width:768px) {
-    .content {
-      padding:1.5em 5%;
-      float:right;
-      width:90%;
-      position: relative;
-    }
-    .content > .container {
-      width:700px;
-    }
-    .content-item {
-      width:31.33333%;
-      margin:0 1% 25px;
-    }
-  }
- /* Laptops and Desktops */
-  @media (min-width:992px) {
-    .content {
-      padding:1.5em 1%;
-      float:right;
-      width:83.33333333%;
-      position: relative;
-    }
-    .content > .container {
-      width:auto;
-    }
-    .content-item {
-      width:23%;
-      margin:0 1% 25px;
+  @media (min-width: 1200px) {
+    .container {
+      width: 96%;
     }
   }
 
@@ -623,3 +609,99 @@ BOTTOM HERE FOR THE .STAGGER CLASS DID WORK.  WEIRD.
     line-height: 18px;
     margin:5px 0 0;
   }
+
+  @media (min-width: 992px){
+   footer{
+     background-color: #001B4C;
+     background-image: linear-gradient(to left,
+        #353576 0%, #353576 33.33337%, #001B4C 33.33337%, #001B4C 100%);
+     height: 100px;
+   }
+   footer p, footer nav ul{
+     padding: 2em 0;
+     text-align: left;
+   }
+   footer .right-footer-block {
+     background-color: #001B4C;
+   }
+   footer .logo{
+     padding: 2em 0 2em 1.5em;
+   }
+ }
+
+ /* Larger Mobile Devices */
+  @media (min-width:460px) {
+    .content {
+      padding:1.5em 1%;
+      float:right;
+      width:90%;
+      position: relative;
+    }
+    .content-item {
+      width:46%;
+      margin:0 2% 25px;
+      float:left;
+      display:block;
+    }
+  }
+
+ /* Tablets */
+  @media (min-width:768px) {
+    .content {
+      padding:1.5em 5%;
+      float:right;
+      width:90%;
+      position: relative;
+    }
+    .content > .container {
+      width:700px;
+    }
+    .content-item {
+      width:31.33333%;
+      margin:0 1% 25px;
+    }
+  }
+
+ /* Laptops and Desktops */
+  @media (min-width:992px) {
+    .content {
+      padding:1.5em 1%;
+      float:right;
+      width:83.33333333%;
+      position: relative;
+    }
+    .content > .container {
+      width:auto;
+    }
+    .content-item {
+      width:23%;
+      margin:0 1% 25px;
+    }
+
+
+ @media (min-width:992px) {
+   .left-nav {
+     height: 100vh;
+     width:14.66666667%;
+     color:#FFFFFF;
+     background: #001b4c;
+     background-image: linear-gradient(206deg, #353576 0%, #001b4c 94%);
+     float:left;
+     position: fixed;
+     display:block;
+     transform: translate(0,0);
+     -webkit-transform: translate(0,0); /** Chrome & Safari **/
+     -o-transform: translate(0,0); /** Opera **/
+     -moz-transform: translate(0,0); /** Firefox **/
+   }
+   .left-nav.open {
+     width:14.66666667%;
+     transform: translate(0,0);
+     -webkit-transform: translate(0,0); /** Chrome & Safari **/
+     -o-transform: translate(0,0); /** Opera **/
+     -moz-transform: translate(0,0); /** Firefox **/
+   }
+   .hamburger {
+     display:none;
+   }
+ }
