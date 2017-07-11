@@ -28,7 +28,7 @@ h2 {
   padding-right: 15px;
   position: relative;
 }
-.container:before
+.container:before,
 .container:after {
   content: " ";
   display: table;
@@ -41,8 +41,10 @@ h2 {
   float:left;
   position:relative;
   min-height: 1px;
-  margin:0 2% 20px;
+  margin:10px 2% 0px;
 }
+
+
 
 /* HEADER */
 header {
@@ -81,24 +83,26 @@ header nav ul > li.btn-outline:hover > a {
   color:#353576;
 }
 header .hero {
-  text-align: left;
+  text-align: center;
   display:block;
   position: relative;
 }
 header .hero h1 {
   font-size:48px;
   font-weight: normal;
-  margin:300px 0 0;
+  margin:95px 0 0;
 }
 header .hero p {
   font-size: 22px;
   line-height: 26px;
   font-weight: 100;
   margin:10px 0 40px;
+  text-align: center;
 }
 header .hero img {
   display: block;
-  margin:3em auto 0;
+  margin:3em auto 0px;
+  padding: 0;
 }
 /* BUTTONS */
  .btn {
@@ -117,7 +121,6 @@ header .hero img {
    text-align: center;
    display:block;
    position:relative;
-   height: 400px;
  }
  .benefits ul {
    margin: 0 auto;
@@ -146,7 +149,7 @@ header .hero img {
     top center no-repeat, linear-gradient(206deg, #353576 0%, #001B4C 94%);
   background-size:cover;
   text-align: center;
-  padding:4em 0;
+  padding:2em 0;
 }
 .pricing h2, .pricing p {
   color:#FFFFFF;
@@ -220,7 +223,7 @@ header .hero img {
 
 /* TESTIMONIALS */
 .testimonials {
-  padding:4em 0;
+  padding:1em 0 4em;
   text-align: center;
 }
 .testimonials h2 {
@@ -244,14 +247,6 @@ BOTTOM HERE FOR THE .STAGGER CLASS DID WORK.  WEIRD.
 
 
 */
-
-.call-to-action {
-  display:block;
-  position:relative;
-  height: 500px;
-}
-
-
 
 
 .testimonials blockquote {
@@ -295,6 +290,22 @@ BOTTOM HERE FOR THE .STAGGER CLASS DID WORK.  WEIRD.
  .stagger {
    padding: 20px 0;
  }
+
+/* EXTRA SECTION */
+
+ .call-to-action {
+   display:block;
+   position:relative;
+   padding: 4em 0;
+   margin-top: -160px;
+   margin-bottom: -10px;
+ }
+
+ .call-to-action p {
+   margin-top: 10px;
+   margin-bottom: 30px;
+ }
+
 
  /* FOOTER */
  footer {
@@ -543,51 +554,54 @@ BOTTOM HERE FOR THE .STAGGER CLASS DID WORK.  WEIRD.
 
 /* ORIGINAL MEDIA QUERIES */
 
- @media (min-width: 320px) {
-   .container {
-     width: 310px;
-   }
-   .one-half {
-     width: 100%;
-     float:left;
-     position:relative;
-     min-height: 1px;
-     margin:0 2% -12%;
-   }
-   #dash img{
-     width: 100%;
-   }
-   header .hero h1 {
-     font-size:48px;
-     font-weight: normal;
-     margin:100px 0 0;
-   }
-   .benefits {
-     text-align: center;
-     display:block;
-     position:relative;
-     height: 940px;
-   }
- }
+
+@media (min-width: 320px) {
+  .container {
+    width: 290px;
+  }
+  .one-half {
+    width: 100%;
+    float:left;
+    position:relative;
+    min-height: 1px;
+    margin:0 2% -12%;
+  }
+  /*header .hero img {
+    width: 100%;
+  } */
+  header .hero h1 {
+    font-size:48px;
+    font-weight: normal;
+    margin:100px 0 0;
+  }
+
+
+  .benefits {
+    text-align: center;
+    display:block;
+    position:relative;
+  }
+}
+
 
  @media (min-width: 360px) {
    .container {
-     width: 340px;
+     width: 326px;
    }
  }
  @media (min-width: 375px) {
    .container {
-     width: 350px;
+     width: 343px;
    }
  }
  @media (min-width: 414px) {
    .container {
-     width: 390px;
+     width: 380px;
    }
  }
  @media (min-width: 768px) {
    .container {
-     width: 750px;
+     width: 732px;
    }
  }
 
@@ -624,10 +638,13 @@ BOTTOM HERE FOR THE .STAGGER CLASS DID WORK.  WEIRD.
       width:31.33333%;
       margin:0 1% 25px;
     }
+    header .hero img {
+      width: auto;
+      margin: 3em auto -6px;
   }
 
  /* Laptops and Desktops */
- @media (min-width:992px) {
+ @media (min-width:991px) {
    .content {
      padding:1.5em 1%;
      float:right;
