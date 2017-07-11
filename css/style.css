@@ -310,19 +310,21 @@ BOTTOM HERE FOR THE .STAGGER CLASS DID WORK.  WEIRD.
  /* FOOTER */
  footer {
    background-color: #001B4C;
-   background-image: linear-gradient(to top,
-      #353576 0%, #353576 50%, #001B4C 50%, #001B4C 100%);
+   background-image: linear-gradient(-225deg, #001B4C 0%,
+     #00115E 62%, #353576 100%);
    color: #FFFFFF;
    height: 150px;
    position: relative;
    overflow: hidden;
    z-index: 0;
  }
+
  footer p, footer nav ul {
    font-size:14px;
    font-weight:100;
    text-align: center;
-   margin: 10px auto 0;
+   margin: 4px auto 0;
+
  }
  footer nav ul li {
    list-style-type: none;
@@ -334,12 +336,24 @@ BOTTOM HERE FOR THE .STAGGER CLASS DID WORK.  WEIRD.
  }
  footer .right-footer-block {
    background-color: transparent;
+   margin: 0;
+   padding: 0;
+   float: right;
  }
  footer .logo{
    padding: 2.35em 0;
    margin: 0 auto;
    display: block;
  }
+
+ footer .footer-nav-block{
+   padding-left: 55px;
+   margin: 0;
+   padding: 0;
+   }
+ }
+
+
 
 
 /* DASHBOARD */
@@ -581,6 +595,16 @@ BOTTOM HERE FOR THE .STAGGER CLASS DID WORK.  WEIRD.
     display:block;
     position:relative;
   }
+  footer .left-footer-block {
+    margin: 24px;
+    margin-top: 15px;
+  }
+  footer .middle-footer-block {
+    margin-top: -15px;
+  }
+  footer .logo {
+    padding: 11px 0;
+  }
 }
 
 
@@ -599,11 +623,22 @@ BOTTOM HERE FOR THE .STAGGER CLASS DID WORK.  WEIRD.
      width: 380px;
    }
  }
+ @media (min-width: 460px) {
+   footer .logo {
+    padding: 24px 0;
+   }
+ }
  @media (min-width: 768px) {
    .container {
      width: 732px;
    }
- }
+   header nav ul {
+     padding-top: 6px;
+   }
+   footer .logo {
+     padding: 20px 0;
+   }
+}
 
 
 
@@ -620,6 +655,9 @@ BOTTOM HERE FOR THE .STAGGER CLASS DID WORK.  WEIRD.
       margin:0 2% 25px;
       float:left;
       display:block;
+    }
+    footer .footer-nav-block {
+      width: 100%;
     }
   }
 
@@ -641,10 +679,14 @@ BOTTOM HERE FOR THE .STAGGER CLASS DID WORK.  WEIRD.
     header .hero img {
       width: auto;
       margin: 3em auto -6px;
-  }
+    }
+    footer .footer-nav-block {
+      width: 100%;
+    }
+}
 
  /* Laptops and Desktops */
- @media (min-width:991px) {
+ @media (min-width:992px) {
    .content {
      padding:1.5em 1%;
      float:right;
@@ -696,9 +738,9 @@ BOTTOM HERE FOR THE .STAGGER CLASS DID WORK.  WEIRD.
      display:none;
    }
    footer{
-     background-color: #001B4C;
-     background-image: linear-gradient(to left,
-        #353576 0%, #353576 33.33337%, #001B4C 33.33337%, #001B4C 100%);
+     background-color: #3498DB;
+     background-image: linear-gradient(-225deg, #001b4c 0%,
+       #00115E 62%, #353576 100%);
      height: 100px;
    }
    footer p, footer nav ul{
@@ -706,12 +748,23 @@ BOTTOM HERE FOR THE .STAGGER CLASS DID WORK.  WEIRD.
      text-align: left;
    }
    footer .right-footer-block {
-     background-color: #001B4C;
+     background-color: #001b4c;
+     margin-top: 0;
+     padding-bottom: 12px;
    }
    footer .logo{
-     padding: 2em 0 2em 1.5em;
+     padding: 2em 8em 2em 1.5em;
    }
- }
+   footer .footer-nav-block{
+   padding-left: 55px;
+  }
+  footer .middle-footer-block {
+    margin-top: 4px;
+  }
+  footer .left-footer-block {
+    margin-top: 8px;
+  }
+}
 
  @media (min-width: 1200px) {
    .container {
@@ -749,5 +802,11 @@ BOTTOM HERE FOR THE .STAGGER CLASS DID WORK.  WEIRD.
    color: #333333;
    line-height: 18px;
    margin:5px 0 0;
+ }
+ footer .middle-footer-block {
+    margin-top: 10px;
+  }
+  footer .left-footer-block {
+    margin-top: 10px;
  }
 }
